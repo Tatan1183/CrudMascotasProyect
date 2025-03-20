@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestión de Mascotas</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <h1 class="mt-5 mb-4 text-center text-primary">Gestión de Mascotas</h1>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered bg-white shadow-sm">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Raza</th>
+                            <th>Edad</th>
+                            <th>Dueño</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-mascotas">
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="mt-4 text-secondary">Agregar/Editar Mascota</h2>
+            <form id="form-agregar-mascota" class="bg-white shadow-sm p-3 rounded">
+                <input type="hidden" id="id" name="id">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="raza" class="form-label">Raza:</label>
+                    <input type="text" class="form-control" id="raza" name="raza" required>
+                </div>
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edad:</label>
+                    <input type="number" class="form-control" id="edad" name="edad" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dueño" class="form-label">Dueño:</label>
+                    <input type="text" class="form-control" id="dueño" name="dueño" required>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <button type="button" class="btn btn-secondary" onclick="limpiarFormulario()">Limpiar</button>
+                </div>
+            </form>
+            <br>
+          
+
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
